@@ -1,5 +1,5 @@
-TARGET = qView
-VERSION = 6.1
+TARGET = yView
+VERSION = 1.0
 
 QT += core gui network widgets
 
