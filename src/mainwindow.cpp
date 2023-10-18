@@ -899,19 +899,19 @@ void MainWindow::rename()
 void MainWindow::zoomIn()
 {
     graphicsView->zoomIn();
-    graphicsView->setWindowSize();
+    setWindowSize();
 }
 
 void MainWindow::zoomOut()
 {
     graphicsView->zoomOut();
-    graphicsView->setWindowSize();
+    setWindowSize();
 }
 
 void MainWindow::resetZoom()
 {
     graphicsView->resetScale();
-    graphicsView->setWindowSize();
+    setWindowSize();
 }
 
 void MainWindow::originalSize()
