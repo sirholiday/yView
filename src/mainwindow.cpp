@@ -467,7 +467,7 @@ void MainWindow::setWindowSize()
 
     //check if the program is configured to resize the window
     int windowResizeMode = qvApp->getSettingsManager().getInteger("windowresizemode");
-    if (!(windowResizeMode == 2 || (windowResizeMode == 1 && justLaunchedWithImage)))
+    if (!(windowResizeMode == 2 || (windowResizeMode == 1 && true)))
         return;
 
     justLaunchedWithImage = false;
@@ -899,16 +899,19 @@ void MainWindow::rename()
 void MainWindow::zoomIn()
 {
     graphicsView->zoomIn();
+    graphicsView->setWindowSize();
 }
 
 void MainWindow::zoomOut()
 {
     graphicsView->zoomOut();
+    graphicsView->setWindowSize();
 }
 
 void MainWindow::resetZoom()
 {
     graphicsView->resetScale();
+    graphicsView->setWindowSize();
 }
 
 void MainWindow::originalSize()
